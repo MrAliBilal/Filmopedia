@@ -4,10 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <title>Filmopedia</title>
   </head>
   <body>
-    <div id="root"></div>
+        <div class="relative min-h-screen">
+      <!-- background image layer -->
+      <div class="absolute inset-0 bg-[url('/index-bg.jpg')] bg-center bg-cover bg-no-repeat" aria-hidden="true"></div>
+
+      <!-- dark overlay for better text readability -->
+      <div class="absolute inset-0 bg-black/50 backdrop-brightness-60" aria-hidden="true"></div>
+
+      <!-- React mounts here; keep above overlay -->
+      <div id="root" class="relative z-10"></div>
+    </div>
     <script type="module" src="/src/main.jsx"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
   </body>
 </html>
