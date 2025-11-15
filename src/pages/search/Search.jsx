@@ -12,8 +12,11 @@ const Search = () => {
   const isPeoplePath = location.pathname === '/search/people';
   const [searchParams] = useSearchParams()
   const query = searchParams.get('query') || ''
-  const searchUrl = `${TMDB_MULTI_SEARCH_URL}?query=${encodeURIComponent(query)}`
+  const page = parseInt(searchParams.get('page') || '1', 10)
 
+  console.log("Current Query:", page);
+  const searchUrl = `${TMDB_MULTI_SEARCH_URL}?query=${encodeURIComponent(query)}&page=${page}`
+  console.log("Search URL:", searchUrl);
   const [searchList, setSearchList] = useState([]);
 
 
@@ -33,7 +36,7 @@ const Search = () => {
 
   useEffect(() => {
     fetchSearchResults();
-  }, [query]);
+  }, [query, page]);
 
 
 
@@ -42,8 +45,8 @@ const Search = () => {
       <NewTempNavbar />
 
       <section className="flex pt-24 px-12 pb-12">
-        <aside >
-          <div className="rounded-lg border-solid border-2 border-gray-200 max-md:hidden w-64">
+        <aside className="mr-10 max-md:hidden">
+          <div className="rounded-lg border-solid border-2 border-gray-200 w-64">
             <div className="bg-sky-500 rounded-t-lg">
               <h1 className="text-white p-5 font-bold">Search Results</h1>
             </div>
@@ -58,7 +61,7 @@ const Search = () => {
             </div>
           </div>
         </aside>
-        <section>
+        <section className=" w-full">
           <Outlet />
         </section>
       </section>
