@@ -5,6 +5,10 @@ export const TMDB_TV_SEARCH_URL = 'https://api.themoviedb.org/3/search/tv'
 export const TMDB_PEOPLE_SEARCH_URL = 'https://api.themoviedb.org/3/search/person'
 export const TMDB_COMPANY_SEARCH_URL = 'https://api.themoviedb.org/3/search/company'
 export const TMDB_COLLECTION_SEARCH_URL = 'https://api.themoviedb.org/3/search/collection'
+export const TMDB_POPULAR_MOVIES_URL = 'https://api.themoviedb.org/3/movie/popular'
+export const TMDB_NOW_PLAYING_MOVIES_URL = 'https://api.themoviedb.org/3/movie/now_playing'
+export const TMDB_TOP_RATED_MOVIES_URL = 'https://api.themoviedb.org/3/movie/top_rated'
+export const TMDB_UPCOMING_MOVIES_URL = 'https://api.themoviedb.org/3/movie/upcoming'
 
 export const TMDB_ANIME_SEARCH_URL = 'https://api.jikan.moe/v4/anime' // Using Jikan API for anime search
 
