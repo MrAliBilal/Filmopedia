@@ -4,6 +4,7 @@ import HeroSection from "../components/HeroSection"
 import NewTempNavbar from "../components/NewTempNavbar"
 
 export const Movie = () => {
+  
     const { popular, nowPlaying, topRated, upcoming } = useLoaderData();
 
     console.log(popular, nowPlaying, topRated, upcoming);

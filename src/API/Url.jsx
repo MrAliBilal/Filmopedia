@@ -9,6 +9,21 @@ export const TMDB_POPULAR_MOVIES_URL = 'https://api.themoviedb.org/3/movie/popul
 export const TMDB_NOW_PLAYING_MOVIES_URL = 'https://api.themoviedb.org/3/movie/now_playing'
 export const TMDB_TOP_RATED_MOVIES_URL = 'https://api.themoviedb.org/3/movie/top_rated'
 export const TMDB_UPCOMING_MOVIES_URL = 'https://api.themoviedb.org/3/movie/upcoming'
+export const TMDB_POPULAR_TV_URL = 'https://api.themoviedb.org/3/tv/popular'
+export const TMDB_AIRING_TODAY_TV_URL = 'https://api.themoviedb.org/3/tv/airing_today'
+export const TMDB_TOP_RATED_TV_URL = 'https://api.themoviedb.org/3/tv/top_rated'
+export const TMDB_ON_THE_AIR_TV_URL = 'https://api.themoviedb.org/3/tv/on_the_air'
+export const TMDB_POPULAR_ANIME_URL =
+  'https://api.themoviedb.org/3/discover/tv?with_genres=16&with_origin_country=JP&include_adult=false&sort_by=popularity.desc';
+
+export const TMDB_TOP_RATED_ANIME_URL =
+  'https://api.themoviedb.org/3/discover/tv?with_genres=16&with_origin_country=JP&sort_by=vote_average.desc&vote_count.gte=200';
+
+export const TMDB_AIRING_TODAY_ANIME_URL =
+  'https://api.themoviedb.org/3/discover/tv?with_genres=16&with_origin_country=JP&with_status=3&sort_by=first_air_date.desc';
+
+export const TMDB_ON_THE_AIR_ANIME_URL =
+  'https://api.themoviedb.org/3/discover/tv?with_genres=16&with_origin_country=JP&first_air_date.gte=2025-01-24&sort_by=first_air_date.asc';
 
 export const TMDB_ANIME_SEARCH_URL = 'https://api.jikan.moe/v4/anime' // Using Jikan API for anime search
 
