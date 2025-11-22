@@ -6,7 +6,7 @@ const PeopleSearch = () => {
     const { results, total_pages, page } = useLoaderData();
     
   return (
-    <SearchCardList results = {results} total_pages={total_pages} page={page} type= "People" />
+    <SearchCardList results = {results} total_pages={total_pages} page={page} type= "People" title="People Search" />
   )
 }
 

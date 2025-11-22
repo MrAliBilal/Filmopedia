@@ -1,7 +1,8 @@
 import { useSearchParams, useLocation } from 'react-router';
+import HeroSection from './HeroSection';
 
 
-export const SearchCardList = ({ results, total_pages, page, type }) => {
+export const SearchCardList = ({ results, total_pages, page, type, title }) => {
 
   const location = useLocation();
   const isSearchPath = location.pathname === '/search';
@@ -25,6 +26,19 @@ export const SearchCardList = ({ results, total_pages, page, type }) => {
 
   return (
     <section className='relative z-10 rounded-sm border-solid border-2 border-gray-200'>
+
+
+      <section className="bg-neutral-primary bg-[url('')] dark:bg-[url('')] px-8 ">
+    <div className="px-4 border-b-1 border-gray-200 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative ">
+        <h1 className="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">{title}</h1>
+        <form  className='relative flex flex-col'>
+          <input id='temp1' className='min-w-md h-12 my-4 px-6 bg-amber-50 text-black  rounded-4xl focus:outline-none placeholder:text-center placeholder:pr-18' placeholder="Search through thousands of movies" type="text"></input>
+          <button dir="rtl" className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 bg-linear-to-r from-emerald-300 to-cyan-400 text-while  rounded-4xl' type="submit" >Search</button>
+        </form>
+    </div>
+</section>
+
+
       {results.length > 0 ? (
         <ul className='flex flex-col gap-4 p-8 '>
           {results.map((searchItem) => (
@@ -40,7 +54,7 @@ export const SearchCardList = ({ results, total_pages, page, type }) => {
                 <h3 className='text-blue-400 my-1'>
                   <span>{isSearchPath ? searchItem.media_type.charAt(0).toUpperCase() + searchItem.media_type.slice(1) : type}</span>
                   <span className="ml-4">{searchItem.first_air_date || searchItem.release_date || searchItem.gender ? searchItem.release_date || searchItem.first_air_date || getGender(searchItem.gender) : 'Not Available'}</span>
-                  <span className="ml-1 relative before:content-[url(/star.svg)] before:mr-1 before:relative before:top-[3px]">{searchItem.vote_average ? searchItem.vote_average.toFixed(1) : 'N/A'}</span></h3>
+                  <span className="ml-4 relative before:content-[url(/star.svg)] before:mr-1 before:relative before:top-[3px]">{searchItem.vote_average ? searchItem.vote_average.toFixed(1) : 'N/A'}</span></h3>
                 <p className='text-yellow-400 font-bold line-clamp-3'>{searchItem.overview}</p>
               </div>
             </li>

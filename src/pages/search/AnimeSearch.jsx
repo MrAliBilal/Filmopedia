@@ -6,7 +6,7 @@ const AnimeSearch = () => {
     const { results, total_pages, page } = useLoaderData();
 
   return (
-    <SearchCardList results = {results} total_pages={total_pages} page={page} type= "Anime" />
+    <SearchCardList results = {results} total_pages={total_pages} page={page} type= "Anime" title="Anime Search" />
   )
 }
 
