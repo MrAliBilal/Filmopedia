@@ -17,11 +17,11 @@ const SideBar = () => {
 
     return (
         <aside className="mr-10 max-md:hidden sticky top-24 h-fit">
-            <div className="rounded-lg border-solid border-2 border-gray-200 w-64">
-                <div className="bg-sky-500 rounded-t-lg">
+            <div className=" w-64">
+                <div className="bg-sky-500 rounded-t-lg ">
                     <h1 className="text-white p-5 font-bold">Search Results</h1>
                 </div>
-                <div className="">
+                <div className=" rounded-b-lg border-solid border-t-0 border-2 border-gray-200">
                     <ul className="pt-2">
                         <li className={`pl-5 py-2 hover:bg-gray-50 ${isSearchPath ? "bg-gray-100" : ""}`}><Link to={isSearchPath ? `/search?query=${query}&page=${pageNumber}` : `/search?query=${query}`}>All</Link></li>
                         <li className={`pl-5 py-2 hover:bg-gray-50 ${isMoviesPath ? "bg-gray-100" : ""}`}><Link to={isMoviesPath ? `/search/movie?query=${query}&page=${pageNumber}` : `/search/movie?query=${query}`}>Movies</Link></li>
