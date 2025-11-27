@@ -2,6 +2,6 @@
 
 @theme {
   --background-image-index-bg: url("index-bg.jpg");
-  --color-mint-500: oklch(0.72 0.11 178);
+  --color-primary-500: oklch(0.2579 0.065 248.04);
 }
 

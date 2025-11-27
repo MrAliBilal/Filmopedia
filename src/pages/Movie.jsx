@@ -13,7 +13,9 @@ export const Movie = () => {
     <>
       <HeroSection
         title="Movies"
-        description="Explore popular, top-rated, and currently airing Movies" />
+        description="Explore popular, top-rated, and currently airing Movies"
+        SearchText="Search through thousands of movies"
+        pathSearch="/search" />
 
       <DiscoverList results={popular} cardTitle="Popular Movies" />
       <DiscoverList results={nowPlaying} cardTitle="Now Playing Movies" />

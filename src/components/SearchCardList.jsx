@@ -32,7 +32,7 @@ export const SearchCardList = ({ results, total_pages, page, type, title }) => {
     <div className="px-4 border-b-1 border-gray-200 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative ">
         <h1 className="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">{title}</h1>
         <form  className='relative flex flex-col'>
-          <input id='temp1' className='min-w-md h-12 my-4 px-6 bg-amber-50 text-black  rounded-4xl focus:outline-none placeholder:text-center placeholder:pr-18' placeholder="Search through thousands of movies" type="text"></input>
+          <input id='temp1' className='min-w-md h-12 my-4 px-6 bg-white-50 text-black  rounded-4xl focus:outline-none placeholder:text-center placeholder:pr-18' placeholder="Search through thousands of movies" type="text"></input>
           <button dir="rtl" className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 bg-linear-to-r from-emerald-300 to-cyan-400 text-while  rounded-4xl' type="submit" >Search</button>
         </form>
     </div>
@@ -50,12 +50,12 @@ export const SearchCardList = ({ results, total_pages, page, type, title }) => {
                     ? `https://image.tmdb.org/t/p/w200${searchItem.poster_path || searchItem.profile_path || searchItem.logo_path}` : '/no-movie.png'}></img>
               </div>
               <div className="mt-1">
-                <h3 className='text-yellow-400 font-bold my-1'>{searchItem.title || searchItem.name}</h3>
+                <h3 className='text-black-200 font-bold my-1'>{searchItem.title || searchItem.name}</h3>
                 <h3 className='text-blue-400 my-1'>
                   <span>{isSearchPath ? searchItem.media_type.charAt(0).toUpperCase() + searchItem.media_type.slice(1) : type}</span>
                   <span className="ml-4">{searchItem.first_air_date || searchItem.release_date || searchItem.gender ? searchItem.release_date || searchItem.first_air_date || getGender(searchItem.gender) : 'Not Available'}</span>
                   <span className="ml-4 relative before:content-[url(/star.svg)] before:mr-1 before:relative before:top-[3px]">{searchItem.vote_average ? searchItem.vote_average.toFixed(1) : 'N/A'}</span></h3>
-                <p className='text-yellow-400 font-bold line-clamp-3'>{searchItem.overview}</p>
+                <p className='text-gray-600 font-bold line-clamp-3'>{searchItem.overview}</p>
               </div>
             </li>
           ))}

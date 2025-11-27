@@ -24,10 +24,10 @@ const NewTempNavbar = () => {
 <nav className={`fixed w-full z-20 top-0 start-0 sm:px-6 transition-colors duration-300 
       ${
         isScrolled
-          ? "bg-[rgb(3,37,65)] shadow-md"
+          ? "bg-primary-500 shadow-md"
           : isRootPath
           ? "bg-transparent"
-          : "bg-[rgb(3,37,65)]"
+          : "bg-primary-500"
       }`}>
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3.5">
   <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
