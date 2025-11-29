@@ -1,11 +1,9 @@
-import NewTempNavbar from "../components/NewTempNavbar";
 
 export default function RouteError() {
   const error = useRouteError();
 
   return (
     <>
-        <NewTempNavbar />
         <main className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
       <h1 className="text-5xl font-bold text-red-600">Oops!</h1>
 

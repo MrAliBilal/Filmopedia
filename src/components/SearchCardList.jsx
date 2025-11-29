@@ -1,12 +1,14 @@
-import { useSearchParams, useLocation } from 'react-router';
-import HeroSection from './HeroSection';
+import { useSearchParams, useLocation, useNavigate } from 'react-router';
+import { useState } from 'react';
 
-
-export const SearchCardList = ({ results, total_pages, page, type, title }) => {
+export const SearchCardList = ({ results, total_pages, page, type, title, pathSearch }) => {
 
   const location = useLocation();
   const isSearchPath = location.pathname === '/search';
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const [query, setQuery] = useState("");
+  const navigate = useNavigate();
 
   const getGender = (gender) => {
     switch (gender) {
@@ -19,28 +21,42 @@ export const SearchCardList = ({ results, total_pages, page, type, title }) => {
 
   console.log(results);
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (!query) return;
+    navigate(`${pathSearch}?query=${encodeURIComponent(query)}`);
+  };
+
   const handlePageChange = (newPage) => {
     if (newPage < 1 || newPage > total_pages) return;
     setSearchParams({ query: searchParams.get('query') || '', page: String(newPage) });
   };
 
   return (
-    <section className='relative z-10 rounded-sm border-solid border-2 border-gray-200'>
+    <section className='relative z-10 sm:rounded-sm sm:border-solid sm:border-2 sm:border-gray-200 m-1' >
 
 
-      <section className="bg-neutral-primary bg-[url('')] dark:bg-[url('')] px-8 ">
-    <div className="px-4 border-b-1 border-gray-200 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative ">
-        <h1 className="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">{title}</h1>
-        <form  className='relative flex flex-col'>
-          <input id='temp1' className='min-w-md h-12 my-4 px-6 bg-white-50 text-black  rounded-4xl focus:outline-none placeholder:text-center placeholder:pr-18' placeholder="Search through thousands of movies" type="text"></input>
-          <button dir="rtl" className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 bg-linear-to-r from-emerald-300 to-cyan-400 text-while  rounded-4xl' type="submit" >Search</button>
-        </form>
-    </div>
-</section>
+      <section className="bg-neutral-primary bg-[url('')] dark:bg-[url('')] sm:px-8 ">
+        <div className="sm:px-4 border-b-1 border-gray-200 mx-auto text-center lg:py-16 z-10 relative ">
+          <h1 className="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">{title}</h1>
+          <form className='relative flex flex-col px-12' onSubmit={handleSearch}>
+            <input id='temp1'
+              className='sm:min-w-md h-12 my-4 px-6 bg-white-50 text-black  rounded-4xl focus:outline-none 
+              placeholder:text-center placeholder:pr-18'
+              placeholder="Search through thousands of movies"
+              type="text"
+              onChange={(e) => setQuery(e.target.value)}></input>
+            <button dir="rtl" 
+            className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 mr-12
+            bg-linear-to-r from-emerald-300 to-cyan-400 text-while rounded-4xl' 
+            type="submit" >Search</button>
+          </form>
+        </div>
+      </section>
 
 
       {results.length > 0 ? (
-        <ul className='flex flex-col gap-4 p-8 '>
+        <ul className='flex flex-col sm:p-8 '>
           {results.map((searchItem) => (
             <li key={searchItem.id} className='p-4 border-b-1 border-gray-200 flex flex-row'>
               <div className="flex-shrink-0 ">

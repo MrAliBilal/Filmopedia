@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router'
-import NewTempNavbar from '../components/NewTempNavbar'
 import Footer from '../components/Footer'
+import MainNavbar from '../components/MainNavbar'
 
 const MainLayout = () => {
   return (
-    <section className='pb-8'>
-    <NewTempNavbar />
-    <Outlet />
-    <Footer textColor = "text-white"/>
+    <section className='sm:pb-4 pb-1'>
+      <MainNavbar />
+      <Outlet />
+      <Footer textColor = "text-white"/>
     </section>
   )
 }

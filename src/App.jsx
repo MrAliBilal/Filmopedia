@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router';
 import './App.css'
-import NewTempNavbar from './components/NewTempNavbar'
 import { TMDB_MULTI_SEARCH_URL, API_OPTIONS as options } from './API/Url.jsx';
 
 function App() {

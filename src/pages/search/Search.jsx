@@ -1,5 +1,5 @@
 import { useSearchParams, useLoaderData, Outlet, useLocation, Link } from "react-router";
-import SearchCardList  from "../../components/SearchCardList.jsx";
+import SearchCardList from "../../components/SearchCardList.jsx";
 import SideBar from "../../components/SideBar.jsx";
 
 const Search = () => {
@@ -22,10 +22,17 @@ const Search = () => {
 
   return (
     <>
-      <section className="flex pt-24 px-12 pb-12">
+      <section className="flex pt-24 sm:px-12 pb-12">
         < SideBar />
-        <section className=" w-full">
-          { isSearchPath ? <SearchCardList results = {results} total_pages={total_pages} page={page} title="All Search" /> : <Outlet /> }
+        <section className=" ">
+          {isSearchPath
+            ? <SearchCardList
+                results={results}
+                total_pages={total_pages}
+                page={page}
+                title="All Search"
+                pathSearch="/search" />
+            : <Outlet />}
         </section>
       </section>
     </>

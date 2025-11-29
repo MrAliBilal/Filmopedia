@@ -1,13 +1,11 @@
 import { Outlet } from "react-router"
-import IndexNavbar from "../components/IndexNavbar"
-import TempNavbar from "../components/TempNavbar"
 import Footer from "../components/Footer"
-import NewTempNavbar from "../components/NewTempNavbar"
+import MainNavbar from "../components/MainNavbar"
 
 const IndexLayout = () => {
   return (
-    <div className="bg-black pb-8">
-        <NewTempNavbar />
+    <div className="bg-black pb-4">
+        <MainNavbar />
         <Outlet />
         <Footer textColor = "text-white"/>
     </div>
