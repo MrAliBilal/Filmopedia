@@ -1,6 +1,6 @@
 const Footer = ({textColor}) => {
   return (
-    <footer className = {`bg-primary-500 rounded-base shadow-xs border border-default rounded-lg border-gray-300 mx-1 sm:mx-8 mt-8 ${textColor} sm:px-4`} >
+    <footer className = {`bg-primary-500 rounded-base shadow-xs border border-default rounded-lg border-gray-300 mx-1 sm:mx-4 mt-8 ${textColor} sm:px-4`} >
     <div className ="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div className ="md:flex md:items-center md:justify-between">
             <a href="/" className ="flex items-center mb-4 md:mb-0 space-x-3 rtl:space-x-reverse">

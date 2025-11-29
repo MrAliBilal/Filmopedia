@@ -18,7 +18,8 @@ const HeroSection = ({ title, description, SearchText, pathSearch }) => {
         <h1 className="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl ">{title}</h1>
         <p className="mb-8 text-base font-normal text-body md:text-xl">{description}</p>
         <form className='relative flex flex-col' onSubmit={handleSearch}>
-          <input id='temp1' className='min-w-md h-12 my-4 px-6 bg-amber-50 text-black  rounded-4xl focus:outline-none placeholder:text-center placeholder:pr-18'
+          <input id='temp1' 
+          className=' h-12 my-4 px-6 bg-gray-100 text-black rounded-4xl'
             placeholder={SearchText}
             type="text"
             value={query}

@@ -4,12 +4,12 @@ const DiscoverList = ({ results, total_pages, page, type, cardTitle }) => {
  
     
   return (
-    <section className='relative z-10 rounded-sm border-solid border-2 border-gray-200 m-8 '>
-        <h1 className='text-3xl font-bold p-8'>{cardTitle}</h1>
+    <section className='relative z-10 sm:rounded-sm sm:border-solid sm:border-2 max-sm:border-b-2 border-gray-200 sm:m-8'>
+        <h1 className='text-3xl font-bold sm:p-8 max-sm:p-4'>{cardTitle}</h1>
         {results.length > 0 ? (
-        <ul className='flex flex-cols p-8 divide-x-1 divide-gray-200  overflow-x-auto'>
+        <ul className='flex flex-cols sm:p-8 max-sm:py-6 divide-x-1 divide-gray-200  overflow-x-auto'>
           {results.map((searchItem) => (
-            <li key={searchItem.id} className='px-8 flex flex-col'>
+            <li key={searchItem.id} className='sm:px-8 max-sm:px-4 flex flex-col'>
               <div className="flex-shrink-0 ">
                 <img
                   className="h-60 max-w-[300px] shadow-md rounded-md object-contain center mx-auto"
@@ -17,7 +17,7 @@ const DiscoverList = ({ results, total_pages, page, type, cardTitle }) => {
                     ? `https://image.tmdb.org/t/p/w200${searchItem.poster_path || searchItem.profile_path || searchItem.logo_path}` : '/no-movie.png'}></img>
               </div>
               <div className="mt-1">
-                <h3 className='text-yellow-400 font-bold my-1 text-center line-clamp-1'>{searchItem.title || searchItem.name}</h3>
+                <h3 className='text-black font-bold my-1 text-center line-clamp-1'>{searchItem.title || searchItem.name}</h3>
                 <h3 className='text-blue-400 my-1 text-center'>
                   <span className="">{searchItem.first_air_date || searchItem.release_date || searchItem.gender ? searchItem.release_date || searchItem.first_air_date || getGender(searchItem.gender) : 'Not Available'}</span>
                   <span className="ml-1 relative before:content-[url(/star.svg)] before:mr-1 before:relative before:top-[3px]">{searchItem.vote_average ? searchItem.vote_average.toFixed(1) : 'N/A'}</span></h3>

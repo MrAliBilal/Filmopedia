@@ -50,8 +50,15 @@ function App() {
         <h2 className='font-extrabold sm:text-5xl mb-3 text-4xl'>Welcome.</h2>
         <h3 className='font-semibold sm:text-4xl mb-3 text-2xl'>Millions of movies, TV shows and people to discover. Explore now.</h3>
         <form onSubmit={handleSearch} className='relative'>
-          <input id='temp1' value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} className='min-[500px]:min-w-md min-w-[320px] h-12 my-4 px-6 bg-amber-50 text-black  rounded-4xl focus:outline-none max-[500px]:placeholder:text-xs placeholder:text-center placeholder:pr-18' placeholder="Search through thousands of movies" type="text"></input>
-          <button dir="rtl" className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 bg-linear-to-r from-emerald-300 to-cyan-400 text-while  rounded-4xl' type="submit" >Search</button>
+          <input id='temp1' value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)} 
+          className='min-[500px]:min-w-md min-w-[320px] h-12 my-4 px-6 bg-neutral-800 text-black  rounded-4xl focus:outline-none 
+          max-[500px]:placeholder:text-xs placeholder:text-center placeholder:pr-18 placeholder:text-white' 
+          placeholder="Search for a movie, anime, tv show, person..." 
+          type="text"></input>
+          <button dir="rtl" 
+          className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 
+          bg-linear-to-r from-emerald-300 to-cyan-400 text-while rounded-4xl text-black' 
+          type="submit" >Search</button>
         </form>
       </section>
 

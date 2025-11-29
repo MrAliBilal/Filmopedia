@@ -12,7 +12,9 @@ const TVSearch = () => {
       page={page}
       type="TV"
       title="TV Show Search"
-      pathSearch="/search/tv" />
+      pathSearch="/search/tv"
+      placeHolderText="Search for a tv shows"
+      searchType="tv show" />
   )
 }
 

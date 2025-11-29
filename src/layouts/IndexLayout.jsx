@@ -4,7 +4,7 @@ import MainNavbar from "../components/MainNavbar"
 
 const IndexLayout = () => {
   return (
-    <div className="bg-black pb-4">
+    <div className="bg-black sm:pb-4 pb-1">
         <MainNavbar />
         <Outlet />
         <Footer textColor = "text-white"/>

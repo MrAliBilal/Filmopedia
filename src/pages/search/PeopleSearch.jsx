@@ -12,7 +12,9 @@ const PeopleSearch = () => {
       page={page}
       type="People"
       title="People Search"
-      pathSearch="/search/people" />
+      pathSearch="/search/people"
+      placeHolderText="Search for a people"
+      searchType="people" />
   )
 }
 

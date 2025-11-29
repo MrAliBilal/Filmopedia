@@ -14,7 +14,7 @@ export const Movie = () => {
       <HeroSection
         title="Movies"
         description="Explore popular, top-rated, and currently airing Movies"
-        SearchText="Search through thousands of movies"
+        SearchText="Search for a movie..."
         pathSearch="/search" />
 
       <DiscoverList results={popular} cardTitle="Popular Movies" />

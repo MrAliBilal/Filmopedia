@@ -12,7 +12,8 @@ const AnimeSearch = () => {
       page={page}
       type="Anime"
       title="Anime Search"
-      pathSearch="/search/anime" />
+      placeHolderText="Search for a anime..."
+      searchType="anime" />
   )
 }
 

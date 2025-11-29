@@ -1,7 +1,7 @@
 import { useSearchParams, useLocation, useNavigate } from 'react-router';
 import { useState } from 'react';
 
-export const SearchCardList = ({ results, total_pages, page, type, title, pathSearch }) => {
+export const SearchCardList = ({ results, total_pages, page, type, title, pathSearch,placeHolderText, searchType }) => {
 
   const location = useLocation();
   const isSearchPath = location.pathname === '/search';
@@ -33,17 +33,17 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
   };
 
   return (
-    <section className='relative z-10 sm:rounded-sm sm:border-solid sm:border-2 sm:border-gray-200 m-1' >
+    <section className='relative z-10 sm:rounded-sm sm:border-solid sm:border-2 sm:border-gray-200 max-sm:m-2' >
 
 
-      <section className="bg-neutral-primary bg-[url('')] dark:bg-[url('')] sm:px-8 ">
+      <section className="sm:px-8 sm:pt-10">
         <div className="sm:px-4 border-b-1 border-gray-200 mx-auto text-center lg:py-16 z-10 relative ">
-          <h1 className="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">{title}</h1>
-          <form className='relative flex flex-col px-12' onSubmit={handleSearch}>
+          <h1 className="sm:mb-6 mb-4 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">{title}</h1>
+          <form className='relative flex flex-col px-12 max-sm:mb-4 sm:pb-8' onSubmit={handleSearch}>
             <input id='temp1'
-              className='sm:min-w-md h-12 my-4 px-6 bg-white-50 text-black  rounded-4xl focus:outline-none 
-              placeholder:text-center placeholder:pr-18'
-              placeholder="Search through thousands of movies"
+              className='sm:min-w-md h-12 my-4 px-6 bg-gray-100 text-black  rounded-4xl focus:outline-none 
+              placeholder:text-center placeholder:pr-18 border-gray-200'
+              placeholder={placeHolderText}
               type="text"
               onChange={(e) => setQuery(e.target.value)}></input>
             <button dir="rtl" 
@@ -71,18 +71,18 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
                   <span>{isSearchPath ? searchItem.media_type.charAt(0).toUpperCase() + searchItem.media_type.slice(1) : type}</span>
                   <span className="ml-4">{searchItem.first_air_date || searchItem.release_date || searchItem.gender ? searchItem.release_date || searchItem.first_air_date || getGender(searchItem.gender) : 'Not Available'}</span>
                   <span className="ml-4 relative before:content-[url(/star.svg)] before:mr-1 before:relative before:top-[3px]">{searchItem.vote_average ? searchItem.vote_average.toFixed(1) : 'N/A'}</span></h3>
-                <p className='text-gray-600 font-bold line-clamp-3'>{searchItem.overview}</p>
+                <p className='text-gray-600 font-bold max-sm:line-clamp-2 min-sm:line-clamp-3'>{searchItem.overview}</p>
               </div>
             </li>
           ))}
 
         </ul>
       ) : (
-        <p className='text-center text-gray-400 relative z-10'>Search for movies to see results...</p>
+        <p className='text-center text-gray-400 relative z-10 tracking-tighter text-heading text-4xl py-10 max-sm:border-b-1 border-gray-200'>{!searchParams.get('query') ? `Search for ${searchType} to see results...` : `No ${searchType} is available...`}</p>
       )}
 
       {total_pages > 1 && (
-        <div className="flex justify-center items-center pb-8 gap-4">
+        <div className="flex justify-center items-center min-sm:pb-8 max-sm:py-4 gap-4 max-sm:border-b-1 border-gray-200">
           <button
             onClick={() => handlePageChange(page - 1)}
             disabled={page === 1}

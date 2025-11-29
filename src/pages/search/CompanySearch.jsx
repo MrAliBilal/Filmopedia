@@ -12,7 +12,9 @@ const CompanySearch = () => {
       page={page}
       type="Company"
       title="Company Search"
-      pathSearch="/search/company" />
+      pathSearch="/search/company"
+      placeHolderText="Search for a company"
+      searchType="company" />
   )
 }
 

@@ -12,7 +12,9 @@ const CollectionSearch = () => {
       page={page}
       type="Collection"
       title="Collection Search"
-      pathSearch="/search/collection" />
+      pathSearch="/search/collection"
+      placeHolderText="Search for a collection..."
+      searchType="collection" />
   )
 }
 

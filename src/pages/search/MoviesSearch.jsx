@@ -11,7 +11,9 @@ const MoviesSearch = () => {
       page={page}
       type="Movie"
       title="Movie Search"
-      pathSearch="/search/movie" />
+      pathSearch="/search/movie"
+      placeHolderText="Search for a movies..."
+      searchType="movie" />
   )
 }
 

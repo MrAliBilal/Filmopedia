@@ -22,16 +22,18 @@ const Search = () => {
 
   return (
     <>
-      <section className="flex pt-24 sm:px-12 pb-12">
+      <section className="flex pt-24 sm:px-6 md:px-12 min-h-[74vh] max-md:flex-col">
         < SideBar />
-        <section className=" ">
+        <section className="flex-1">
           {isSearchPath
             ? <SearchCardList
                 results={results}
                 total_pages={total_pages}
                 page={page}
                 title="All Search"
-                pathSearch="/search" />
+                pathSearch="/search"
+                placeHolderText="Search for a movies, tv Shows, Anime, people..."
+                searchType="movies, tv , shows, anime, people" />
             : <Outlet />}
         </section>
       </section>

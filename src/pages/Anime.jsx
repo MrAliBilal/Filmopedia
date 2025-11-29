@@ -9,7 +9,7 @@ const Anime = () => {
       <HeroSection
         title="Discover Anime"
         description="Explore popular, top-rated, and currently airing anime series."
-        SearchText="Search through thousands of movies"
+        SearchText="Search for a anime..."
         pathSearch="/search/anime" />
       <DiscoverList results={popular} cardTitle="Popular Anime" />
       <DiscoverList results={topRated} cardTitle="Top Rated Anime" />
