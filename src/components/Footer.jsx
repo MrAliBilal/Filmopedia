@@ -9,7 +9,7 @@ const Footer = ({textColor}) => {
             </a>
             <ul className ="flex flex-wrap items-center mb-6 text-sm font-medium text-body sm:mb-0 ">
                 <li>
-                    <a href="#" className ="hover:underline me-4 md:me-6">Documentation</a>
+                    <a href="/documentation" className ="hover:underline me-4 md:me-6">Documentation</a>
                 </li>
                 <li>
                     <a href="https://github.com/MrAliBilal" className ="hover:underline me-4 md:me-6">GitHub</a>
@@ -24,7 +24,7 @@ const Footer = ({textColor}) => {
                     <a href="https://github.com/MrAliBilal/Filmopedia" className ="hover:underline me-4 md:me-6">Source Code</a>
                 </li>
                 <li>
-                    <a href="#" className ="hover:underline">Contact</a>
+                    <a href="/contact" className ="hover:underline">Contact</a>
                 </li>
             </ul>
         </div>

@@ -4,8 +4,8 @@ export default function RouteError() {
 
   return (
     <>
-        <main className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
-      <h1 className="text-5xl font-bold text-red-600">Oops!</h1>
+        <main className="h-[75vh] flex flex-col items-center justify-center p-6 text-center">
+      <h1 className="text-5xl font-bold text-primary-500">Oops!</h1>
 
       <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
         Something went wrong while loading this page.
@@ -17,7 +17,7 @@ export default function RouteError() {
 
       <Link
         to="/"
-        className="mt-6 inline-block px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700"
+        className="mt-6 inline-block px-4 py-2 bg-primary-500 text-white rounded-md hover:bg-indigo-700"
       >
         Go Home
       </Link>

@@ -22,7 +22,7 @@ const Search = () => {
 
   return (
     <>
-      <section className="flex pt-24 sm:px-6 md:px-12 min-h-[74vh] max-md:flex-col">
+      <section className="flex pt-17 min-sm:pt-24 sm:px-6 md:px-12 min-h-[74vh] max-lg:flex-col">
         < SideBar />
         <section className="flex-1">
           {isSearchPath

@@ -1,5 +1,4 @@
 import { createBrowserRouter } from "react-router";
-import App from "../App";
 import MainLayout from "../layouts/MainLayout";
 import IndexLayout from "../layouts/IndexLayout";
 import Search from "../pages/search/Search";
@@ -15,13 +14,14 @@ import Tv from "../pages/Tv.jsx";
 import Anime from "../pages/Anime.jsx";
 import NotFound from "../pages/NotFound.jsx";
 import RouteError from "../pages/RouteError.jsx.jsx";
+import Index from "../pages/Index.jsx";
 
 
 export const router = createBrowserRouter([
   {
     Component: IndexLayout,
     children: [
-      { index: true, Component: App },
+      { index: true, Component: Index },
     ],
   },
 
