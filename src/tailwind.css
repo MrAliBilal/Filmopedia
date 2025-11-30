@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --background-image-index-bg: url("index-bg.jpg");
+  --color-primary-500: oklch(0.2579 0.065 248.04);
+}
+
+@utility card-primary-1 {
+   color: #0ea5e9;
+}
