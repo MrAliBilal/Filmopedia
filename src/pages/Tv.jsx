@@ -11,7 +11,8 @@ const Tv = () => {
                 title="Discover TV Shows"
                 description="Explore popular, top-rated, and currently airing TV Shows."
                 SearchText="Search for a tv show..."
-                pathSearch="/search/tv" />
+                pathSearch="/search/tv"
+                bgLink="/hero_section/tv-hero-section.jpg" />
             <DiscoverList results={popular} cardTitle="Popular TV Shows" />
             <DiscoverList results={airingToday} cardTitle="Airing Today TV Shows" />
             <DiscoverList results={topRated} cardTitle="Top Rated TV Shows" />

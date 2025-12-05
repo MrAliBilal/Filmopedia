@@ -10,7 +10,8 @@ const Anime = () => {
         title="Discover Anime"
         description="Explore popular, top-rated, and currently airing anime series."
         SearchText="Search for a anime..."
-        pathSearch="/search/anime" />
+        pathSearch="/search/anime"
+        bgLink="/hero_section/anime-hero-section.jpg" />
       <DiscoverList results={popular} cardTitle="Popular Anime" />
       <DiscoverList results={topRated} cardTitle="Top Rated Anime" />
       <DiscoverList results={airingToday} cardTitle="Airing Anime" />

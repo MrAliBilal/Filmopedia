@@ -15,7 +15,8 @@ export const Movie = () => {
         title="Movies"
         description="Explore popular, top-rated, and currently airing Movies"
         SearchText="Search for a movie..."
-        pathSearch="/search" />
+        pathSearch="/search"
+        bgLink="/hero_section/movie-hero-section.webp" />
 
       <DiscoverList results={popular} cardTitle="Popular Movies" />
       <DiscoverList results={nowPlaying} cardTitle="Now Playing Movies" />

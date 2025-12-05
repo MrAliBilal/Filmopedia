@@ -15,6 +15,8 @@ import Anime from "../pages/Anime.jsx";
 import NotFound from "../pages/NotFound.jsx";
 import RouteError from "../pages/RouteError.jsx.jsx";
 import Index from "../pages/Index.jsx";
+import Documentation from "../pages/Documentation.jsx";
+import Contact from "../pages/Contact.jsx";
 
 
 export const router = createBrowserRouter([
@@ -22,6 +24,8 @@ export const router = createBrowserRouter([
     Component: IndexLayout,
     children: [
       { index: true, Component: Index },
+      { path: "/documentation", Component: Documentation },
+      { path: "/contact", Component: Contact },
     ],
   },
 
@@ -59,7 +63,6 @@ export const router = createBrowserRouter([
         loader: animeLoader,
         errorElement: <RouteError />
       },
-
       {
         path: "*",
         Component: NotFound

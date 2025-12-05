@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
 
-const HeroSection = ({ title, description, SearchText, pathSearch }) => {
+const HeroSection = ({ title, description, SearchText, pathSearch, bgLink }) => {
   const [query, setQuery] = useState("");
   const navigate = useNavigate();
 
@@ -13,7 +13,7 @@ const HeroSection = ({ title, description, SearchText, pathSearch }) => {
   return (
 
 
-    <section className="bg-neutral-primary mt-16 bg-[url('/hero-section.webp')] dark:bg-[url('/hero-section.webp')]">
+    <section className={`bg-neutral-primary mt-16 bg-[url(${bgLink})]`}  style={{ backgroundImage: `url(${bgLink})` }}>
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative text-white">
         <h1 className="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl ">{title}</h1>
         <p className="mb-8 text-base font-normal text-body md:text-xl">{description}</p>
