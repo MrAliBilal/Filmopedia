@@ -2,8 +2,8 @@
 const Documentation = () => {
   return (
     <section className="px-6 md:px-20 py-10 pt-22 text-white bg-[#0B0F17] min-h-screen">
-      {/* Title */}
-      <h1 className="text-4xl md:text-5xl font-bold text-amber-400">
+
+      <h1 className="text-4xl md:text-5xl font-bold text-blue-400">
         Filmopedia Documentation
       </h1>
       <p className="mt-3 text-gray-300 max-w-3xl">
@@ -16,7 +16,7 @@ const Documentation = () => {
         <a
           href="https://filmopedia-demo.vercel.app"
           target="_blank"
-          className="px-4 py-2 bg-amber-500 hover:bg-amber-600 rounded-lg font-medium"
+          className="px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded-lg font-medium"
         >
           🔗 Live Demo
         </a>
@@ -29,9 +29,9 @@ const Documentation = () => {
         </a>
       </div>
 
-      {/* About */}
+
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold text-amber-300">📌 About Filmopedia</h2>
+        <h2 className="text-2xl font-semibold text-blue-300">About Filmopedia</h2>
         <p className="mt-3 text-gray-300 max-w-4xl leading-relaxed">
           Filmopedia is a fast, responsive, and elegant entertainment app for
           discovering Movies, TV Shows, and Anime. Using TMDB’s powerful API, Filmopedia
@@ -41,9 +41,9 @@ const Documentation = () => {
         </p>
       </div>
 
-      {/* Features */}
+
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold text-amber-300">🎬 Core Features</h2>
+        <h2 className="text-2xl font-semibold text-blue-300">Core Features</h2>
 
         <ul className="list-disc list-inside text-gray-300 mt-3 space-y-2">
           <li>🔍 Search movies, TV shows, anime, companies, collections & people</li>
@@ -54,9 +54,9 @@ const Documentation = () => {
         </ul>
       </div>
 
-      {/* Tech Stack */}
+
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold text-amber-300">🛠️ Tech Stack</h2>
+        <h2 className="text-2xl font-semibold text-blue-300">Tech Stack</h2>
 
         <div className="mt-4 border border-gray-800 rounded-xl overflow-hidden w-fit">
           <table className="table-auto text-left text-gray-300">
@@ -80,7 +80,7 @@ const Documentation = () => {
                 <td className="px-4 py-2">Tailwind CSS</td>
               </tr>
               <tr className="border-b border-gray-700">
-                <td className="px-4 py-2">Movie/TV Data</td>
+                <td className="px-4 py-2">Data</td>
                 <td className="px-4 py-2">TMDB API</td>
               </tr>
               <tr>

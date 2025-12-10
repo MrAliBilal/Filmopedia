@@ -7,7 +7,7 @@ const DiscoverList = ({ results, total_pages, page, type, cardTitle }) => {
     <section className='relative z-10 sm:rounded-sm sm:border-solid sm:border-2 max-sm:border-b-2 border-gray-200 sm:m-8'>
         <h1 className='text-3xl font-bold sm:p-8 max-sm:p-4'>{cardTitle}</h1>
         {results.length > 0 ? (
-        <ul className='flex flex-cols sm:p-8 max-sm:py-6 divide-x-1 divide-gray-200  overflow-x-auto'>
+        <ul className='flex flex-cols sm:p-8 max-sm:py-6 divide-x-1 divide-gray-200 scrollbar-custom overflow-x-auto'>
           {results.map((searchItem) => (
             <li key={searchItem.id} className='sm:px-8 max-sm:px-4 flex flex-col'>
               <div className="flex-shrink-0 ">

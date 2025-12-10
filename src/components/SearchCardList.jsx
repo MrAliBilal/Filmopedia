@@ -86,7 +86,7 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
           <button
             onClick={() => handlePageChange(page - 1)}
             disabled={page === 1}
-            className="px-4 text-blue-500 rounded disabled:opacity-50 disabled:text-gray-500"
+            className="px-4 text-blue-800 font-semibold cursor-pointer rounded disabled:opacity-50 disabled:text-gray-500 hover:text-blue-500"
           >
             Previous
           </button>
@@ -96,7 +96,7 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
           <button
             onClick={() => handlePageChange(page + 1)}
             disabled={page === total_pages}
-            className="px-4 text-blue-500 rounded disabled:opacity-50 disabled:text-gray-500"
+            className="px-4 text-blue-800 font-semibold cursor-pointer rounded disabled:opacity-50 disabled:text-gray-500 hover:text-blue-500"
           >
             Next
           </button>

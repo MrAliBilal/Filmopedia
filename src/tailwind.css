@@ -2,9 +2,30 @@
 
 @theme {
   --background-image-index-bg: url("index-bg.jpg");
-  --color-primary-500: oklch(0.2579 0.065 248.04);
+  --color-primary-color-500: oklch(0.2579 0.065 248.04);
+  --color-secondary-color-500: #805be7;
+  --color-secondary-color-2-500: #01b3e4;
 }
 
 @utility card-primary-1 {
    color: #0ea5e9;
+}
+
+@utility scrollbar-custom {
+  &::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-secondary-color-2-500);
+    border-radius: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-blue-500);
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
 }
