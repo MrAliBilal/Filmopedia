@@ -42,7 +42,7 @@ const Index = () => {
 
     return (
         <main>
-            <div className="relative min-h-screen bg-black">
+            <div className="relative min-h-screen">
                 <div className="bg-[url('/index-bg.jpg')] bg-center bg-cover h-svh bg-no-repeat absolute inset-0 z-0">
                     <div className="absolute inset-0 bg-[#000000a6] bg-[linear-gradient(180deg,#000_0,#0000_15%,#0000_60%,#000_90%)]" />
                 </div>
@@ -53,13 +53,11 @@ const Index = () => {
                     <h3 className='font-semibold text-base sm:text-4xl mb-3'>Millions of movies, TV shows and people to discover. Explore now.</h3>
                     <form onSubmit={handleSearch} className='relative'>
                         <input id='temp1' value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)}
-                            className='min-[500px]:min-w-md min-w-[320px] h-12 my-4 px-6 bg-gray-200 text-black  rounded-4xl focus:outline-none 
-          max-[500px]:placeholder:text-xs placeholder:text-center placeholder:pr-18 placeholder:text-black'
+                            className='min-[500px]:min-w-md min-w-[320px] h-12 my-4 px-6 bg-gray-200 text-black  rounded-4xl focus:outline-none max-[500px]:placeholder:text-xs placeholder:text-center placeholder:pr-18 placeholder:text-black'
                             placeholder="Search Movies, Anime or Series"
                             type="text"></input>
                         <button dir="rtl"
-                            className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 
-          bg-linear-to-r from-emerald-300 to-cyan-400 text-while rounded-4xl text-black'
+                            className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 bg-linear-to-r from-emerald-300 to-cyan-400 text-while rounded-4xl text-black'
                             type="submit" >Search</button>
                     </form>
                 </section>

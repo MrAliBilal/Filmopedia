@@ -1,7 +1,14 @@
-const Footer = ({ textColor }) => {
+import React from 'react'
+
+const IndexFooter = () => {
     return (
-        <footer className={`bg-primary-color-500 rounded-base shadow-xs border border-default rounded-lg border-gray-300 mx-1 sm:mx-4 mt-8 ${textColor} sm:px-4`} >
-            <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+        <footer>
+            <div className="h-[3px] w-full 
+                bg-[linear-gradient(90deg,#c02942,#a7dbd7,#0297a3,#668301,#f26c24,#c02942)] 
+                bg-[length:200%_100%] 
+                animate-[gradient_5s_linear_infinite]">
+            </div>
+            <div className="w-full max-w-screen-xl mx-auto p-4 sm:p-8 text-white">
                 <div className="md:flex md:items-center md:justify-between">
                     <a href="/" className="flex items-center mb-4 md:mb-0 space-x-3 rtl:space-x-reverse">
                         <img src="/logo.png" className="h-7" alt="Filmopedia Logo" />
@@ -29,10 +36,11 @@ const Footer = ({ textColor }) => {
                     </ul>
                 </div>
                 <hr className="my-6 border-default text-gray-300 sm:mx-auto lg:my-8" />
-                <span className=" block text-sm font-medium sm:text-center">Designed & Developed by <a href="https://alibilal.online/" className="font-[Sora] tracking-wider font-semibold hover:underline hover:text-secondary-color-2-500">Ali Bilal</a></span>    </div>
-        </footer>
+                <span className=" block text-sm font-medium sm:text-center">Designed & Developed by <a href="https://alibilal.online/" className="font-[Sora] tracking-wider font-bold hover:underline hover:text-secondary-color-2-500">Ali Bilal</a></span>
+
+        </div>
+        </footer >
     )
 }
 
-export default Footer
-
+export default IndexFooter
