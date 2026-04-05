@@ -48,14 +48,14 @@ const Index = () => {
                 </div>
 
 
-                <section className='relative z-10 text-amber-50 h-[80vh] pt-16 flex flex-col items-center justify-center text-center px-4'>
-                    <h2 className='font-extrabold sm:text-5xl mb-3 text-4xl'>Welcome.</h2>
-                    <h3 className='font-semibold sm:text-4xl mb-3 text-2xl'>Millions of movies, TV shows and people to discover. Explore now.</h3>
+                <section className='relative z-10 text-amber-50 h-[87vh] sm:h-[80vh] pt-16 flex flex-col items-center justify-center text-center px-4'>
+                    <h2 className='font-extrabold sm:text-5xl mb-3 text-3xl'>Welcome.</h2>
+                    <h3 className='font-semibold text-base sm:text-4xl mb-3'>Millions of movies, TV shows and people to discover. Explore now.</h3>
                     <form onSubmit={handleSearch} className='relative'>
                         <input id='temp1' value={searchQuery} onChange={(event) => setSearchQuery(event.target.value)}
                             className='min-[500px]:min-w-md min-w-[320px] h-12 my-4 px-6 bg-gray-200 text-black  rounded-4xl focus:outline-none 
           max-[500px]:placeholder:text-xs placeholder:text-center placeholder:pr-18 placeholder:text-black'
-                            placeholder="Search for a movie, anime, tv show, person..."
+                            placeholder="Search Movies, Anime or Series"
                             type="text"></input>
                         <button dir="rtl"
                             className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 
@@ -70,33 +70,36 @@ const Index = () => {
                         <section className='text-white flex flex-wrap justify-center gap-6 sm:gap-8 md:gap-10'>
 
                             <h1
-                                className={`cursor-pointer font-semibold transition-all duration-300 text-sm sm:text-xl md:text-2xl lg:text-3xl
+                                className={`font-[Sora] tracking-wider cursor-pointer uppercase transition-all duration-300 text-xs sm:text-2xl 
                                         ${moviesSectionSwitch === 1
-                                        ? "text-secondary-color-2-500 underline underline-offset-8 scale-105"
+                                        ? "text-secondary-color-2-500 underline font-semibold underline-offset-8 scale-105"
                                         : "hover:text-secondary-color-2-400"}`}
                                 onClick={() => setmoviesSectionSwitch(1)}
                             >
-                                Popular Movies
+                                <span className="sm:hidden">Movies</span>
+                                <span className="hidden sm:block">Popular Movies</span>
                             </h1>
 
                             <h1
-                                className={`cursor-pointer font-semibold transition-all duration-300 text-sm sm:text-xl md:text-2xl lg:text-3xl
+                                className={`font-[Sora] tracking-wider cursor-pointer uppercase transition-all duration-300 text-xs sm:text-2xl 
                                         ${moviesSectionSwitch === 2
-                                        ? "text-secondary-color-2-500 underline underline-offset-8 scale-105"
+                                        ? "text-secondary-color-2-500 underline font-semibold underline-offset-8 scale-105"
                                         : "hover:text-secondary-color-2-400"}`}
                                 onClick={() => setmoviesSectionSwitch(2)}
                             >
-                                Popular Anime
+                                <span className="sm:hidden">Anime</span>
+                                <span className="hidden sm:block">Featured Anime</span>
                             </h1>
 
                             <h1
-                                className={`cursor-pointer font-semibold transition-all duration-300 text-sm sm:text-xl md:text-2xl lg:text-3xl
+                                className={`font-[Sora] tracking-wider cursor-pointer uppercase transition-all duration-300 text-xs sm:text-2xl 
                                         ${moviesSectionSwitch === 3
-                                        ? "text-secondary-color-2-500 underline underline-offset-8 scale-105"
+                                        ? "text-secondary-color-2-500 underline font-semibold underline-offset-8 scale-105"
                                         : "hover:text-secondary-color-2-400"}`}
                                 onClick={() => setmoviesSectionSwitch(3)}
                             >
-                                Trending Series
+                                <span className="sm:hidden">Series</span>
+                                <span className="hidden sm:block">Trending Series</span>
                             </h1>
 
                         </section>
@@ -128,6 +131,27 @@ const Index = () => {
                         color="text-secondary-color-2-500"
                         icon="M16 192l0 224c0 26.5 21.5 48 48 48l384 0c26.5 0 48-21.5 48-48l0-224L16 192zm339.3-16L496 176l0-80c0-16.5-8.3-31-21-39.7L355.3 176zm-22.6 0l5.7-5.7 121-121c-3.6-.9-7.4-1.3-11.3-1.3L331.3 48l-5.7 5.7L203.3 176l129.4 0zm-152 0l5.7-5.7L308.7 48 179.3 48l-5.7 5.7L51.3 176l129.4 0zm-152 0l5.7-5.7L156.7 48 64 48C37.5 48 16 69.5 16 96l0 80 12.7 0zM512 96l0 80 0 8 0 8 0 224c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 192l0-8 0-8L0 96C0 60.7 28.7 32 64 32l384 0c35.3 0 64 28.7 64 64z"
                     />
+                </section>
+
+                <section className="relative z-10 sm:h-[80vh] flex flex-col items-center justify-center text-center px-4 text-white">
+
+                    <div className="mb-6 sm:mb-10 max-w-4xl">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-3">
+                            Enjoy seamless browsing on your favorite screen, anytime, anywhere.
+                        </h2>
+                        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300">
+                            Experience a modern, clean, and fully responsive design built for smooth performance.
+                        </p>
+                    </div>
+
+                    <div className="w-full max-w-5xl flex justify-center">
+                        <img
+                            src="/responsive-screen.png"
+                            alt="Multi Device Preview"
+                            className="w-full h-auto max-h-[50vh] object-contain"
+                        />
+                    </div>
+
                 </section>
 
             </div>
