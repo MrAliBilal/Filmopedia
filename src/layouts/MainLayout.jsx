@@ -4,7 +4,7 @@ import MainNavbar from '../components/MainNavbar'
 
 const MainLayout = () => {
   return (
-    <section className='sm:pb-4 pb-1 flex flex-col'>
+    <section className='flex flex-col'>
       <MainNavbar />
       <div className='flex-1'>
         <Outlet />

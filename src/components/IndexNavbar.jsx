@@ -53,7 +53,7 @@ const IndexNavbar = () => {
                 </div>
                 <div className={`items-center justify-between w-full md:flex md:w-auto md:order-1 ${isMenuOpen ? "block" : "hidden"
                     }`} id="navbar-sticky">
-                    <ul className={`flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ${isMenuOpen ? "bg-primary-500" : ""} `}>
+                    <ul className={`flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ${isMenuOpen ? "bg-black" : ""} `}>
                         <li>
                             <NavLink
                                 to="/"

@@ -5,7 +5,7 @@ import IndexNavbar from "../components/IndexNavbar"
 
 const IndexLayout = () => {
   return (
-    <div className="bg-[#0B0F17] sm:pb-4 pb-1 min-h-screen flex flex-col">
+    <div className="bg-[#0B0F17] min-h-screen flex flex-col">
         <ScrollToTop />
         <IndexNavbar />
         <div className="flex-1">
