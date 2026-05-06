@@ -13,7 +13,7 @@ const HeroSection = ({ title, description, SearchText, pathSearch, bgLink }) => 
   return (
 
 
-    <section className={`bg-neutral-primary mt-16 bg-[url(${bgLink})]`}  style={{ backgroundImage: `url(${bgLink})` }}>
+    <section className={`bg-neutral-primary bg-[url(${bgLink})]`}  style={{ backgroundImage: `url(${bgLink})` }}>
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative text-white">
         <h1 className="mb-6 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl ">{title}</h1>
         <p className="mb-8 text-base font-normal text-body md:text-xl">{description}</p>

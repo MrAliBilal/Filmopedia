@@ -16,17 +16,17 @@ const SideBar = () => {
     const pageNumber = searchParams.get('page') || ''
 
     return (
-        <aside >
+        <aside  className="text-white">
             <div className="min-lg:hidden pb-4">
                 <div className="border-solid max-sm:border-x-0 border-2 sm:rounded-sm border-gray-200  overflow-x-auto">
                     <ul className="py-2 inline-flex mx-5">
-                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-50 ${isSearchPath ? "bg-gray-100 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isSearchPath ? `/search?query=${query}&page=${pageNumber}` : `/search?query=${query}`}>All</Link></li>
-                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-50 ${isMoviesPath ? "bg-gray-100 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isMoviesPath ? `/search/movie?query=${query}&page=${pageNumber}` : `/search/movie?query=${query}`}>Movies</Link></li>
-                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-50 ${isTVShowPath ? "bg-gray-100 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isTVShowPath ? `/search/tv?query=${query}&page=${pageNumber}` : `/search/tv?query=${query}`}>TV</Link></li>
-                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-50 ${isCollectionPath ? "bg-gray-100 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isCollectionPath ? `/search/collection?query=${query}&page=${pageNumber}` : `/search/collection?query=${query}`}>Collection</Link></li>
-                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-50 ${isAnimePath ? "bg-gray-100 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isAnimePath ? `/search/anime?query=${query}&page=${pageNumber}` : `/search/anime?query=${query}`}>Anime</Link></li>
-                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-50 ${isPeoplePath ? "bg-gray-100 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isPeoplePath ? `/search/people?query=${query}&page=${pageNumber}` : `/search/people?query=${query}`}>People</Link></li>
-                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-50 ${isCompanyPath ? "bg-gray-100 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isCompanyPath ? `/search/company?query=${query}&page=${pageNumber}` : `/search/company?query=${query}`}>Company</Link></li>
+                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-400 hover:text-black ${isSearchPath ? "bg-gray-500 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isSearchPath ? `/search?query=${query}&page=${pageNumber}` : `/search?query=${query}`}>All</Link></li>
+                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-400 ${isMoviesPath ? "bg-gray-500 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isMoviesPath ? `/search/movie?query=${query}&page=${pageNumber}` : `/search/movie?query=${query}`}>Movies</Link></li>
+                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-400 ${isTVShowPath ? "bg-gray-500 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isTVShowPath ? `/search/tv?query=${query}&page=${pageNumber}` : `/search/tv?query=${query}`}>TV</Link></li>
+                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-400 ${isCollectionPath ? "bg-gray-500 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isCollectionPath ? `/search/collection?query=${query}&page=${pageNumber}` : `/search/collection?query=${query}`}>Collection</Link></li>
+                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-400 ${isAnimePath ? "bg-gray-500 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isAnimePath ? `/search/anime?query=${query}&page=${pageNumber}` : `/search/anime?query=${query}`}>Anime</Link></li>
+                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-400 ${isPeoplePath ? "bg-gray-500 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isPeoplePath ? `/search/people?query=${query}&page=${pageNumber}` : `/search/people?query=${query}`}>People</Link></li>
+                        <li className={`max-sm:px-3 sm:px-5 py-2 hover:bg-gray-400 ${isCompanyPath ? "bg-gray-500 border-solid border-1 rounded-sm border-gray-200" : ""}`}><Link to={isCompanyPath ? `/search/company?query=${query}&page=${pageNumber}` : `/search/company?query=${query}`}>Company</Link></li>
                     </ul>
                 </div>
             </div>
@@ -37,13 +37,13 @@ const SideBar = () => {
                 </div>
                 <div className=" rounded-b-lg border-solid border-t-0 border-2 border-gray-200">
                     <ul className="pt-2">
-                        <li className={`pl-5 py-2 hover:bg-gray-50 ${isSearchPath ? "bg-gray-100" : ""}`}><Link to={isSearchPath ? `/search?query=${query}&page=${pageNumber}` : `/search?query=${query}`}>All</Link></li>
-                        <li className={`pl-5 py-2 hover:bg-gray-50 ${isMoviesPath ? "bg-gray-100" : ""}`}><Link to={isMoviesPath ? `/search/movie?query=${query}&page=${pageNumber}` : `/search/movie?query=${query}`}>Movies</Link></li>
-                        <li className={`pl-5 py-2 hover:bg-gray-50 ${isTVShowPath ? "bg-gray-100" : ""}`}><Link to={isTVShowPath ? `/search/tv?query=${query}&page=${pageNumber}` : `/search/tv?query=${query}`}>TV Show</Link></li>
-                        <li className={`pl-5 py-2 hover:bg-gray-50 ${isCollectionPath ? "bg-gray-100" : ""}`}><Link to={isCollectionPath ? `/search/collection?query=${query}&page=${pageNumber}` : `/search/collection?query=${query}`}>Collection</Link></li>
-                        <li className={`pl-5 py-2 hover:bg-gray-50 ${isAnimePath ? "bg-gray-100" : ""}`}><Link to={isAnimePath ? `/search/anime?query=${query}&page=${pageNumber}` : `/search/anime?query=${query}`}>Anime</Link></li>
-                        <li className={`pl-5 py-2 hover:bg-gray-50 ${isPeoplePath ? "bg-gray-100" : ""}`}><Link to={isPeoplePath ? `/search/people?query=${query}&page=${pageNumber}` : `/search/people?query=${query}`}>People</Link></li>
-                        <li className={`pl-5 py-2 hover:bg-gray-50 ${isCompanyPath ? "bg-gray-100" : ""}`}><Link to={isCompanyPath ? `/search/company?query=${query}&page=${pageNumber}` : `/search/company?query=${query}`}>Company</Link></li>
+                        <li className={`pl-5 py-2 hover:bg-gray-400 hover:text-black ${isSearchPath ? "bg-gray-500" : ""}`}><Link to={isSearchPath ? `/search?query=${query}&page=${pageNumber}` : `/search?query=${query}`}>All</Link></li>
+                        <li className={`pl-5 py-2 hover:bg-gray-400 hover:text-black ${isMoviesPath ? "bg-gray-500" : ""}`}><Link to={isMoviesPath ? `/search/movie?query=${query}&page=${pageNumber}` : `/search/movie?query=${query}`}>Movies</Link></li>
+                        <li className={`pl-5 py-2 hover:bg-gray-400 hover:text-black ${isTVShowPath ? "bg-gray-500" : ""}`}><Link to={isTVShowPath ? `/search/tv?query=${query}&page=${pageNumber}` : `/search/tv?query=${query}`}>TV Show</Link></li>
+                        <li className={`pl-5 py-2 hover:bg-gray-400 hover:text-black ${isCollectionPath ? "bg-gray-500" : ""}`}><Link to={isCollectionPath ? `/search/collection?query=${query}&page=${pageNumber}` : `/search/collection?query=${query}`}>Collection</Link></li>
+                        <li className={`pl-5 py-2 hover:bg-gray-400 hover:text-black ${isAnimePath ? "bg-gray-500" : ""}`}><Link to={isAnimePath ? `/search/anime?query=${query}&page=${pageNumber}` : `/search/anime?query=${query}`}>Anime</Link></li>
+                        <li className={`pl-5 py-2 hover:bg-gray-400 hover:text-black ${isPeoplePath ? "bg-gray-500" : ""}`}><Link to={isPeoplePath ? `/search/people?query=${query}&page=${pageNumber}` : `/search/people?query=${query}`}>People</Link></li>
+                        <li className={`pl-5 py-2 hover:bg-gray-400 hover:text-black ${isCompanyPath ? "bg-gray-500" : ""}`}><Link to={isCompanyPath ? `/search/company?query=${query}&page=${pageNumber}` : `/search/company?query=${query}`}>Company</Link></li>
                     </ul>
                 </div>
             </div>

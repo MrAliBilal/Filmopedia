@@ -34,3 +34,17 @@
   0% { background-position: 0% 0%; }
   100% { background-position: 200% 0%; }
 }
+
+@font-face {
+  font-family: 'Inspace';
+  src: url('/fonts/Inspace.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hadenut';
+  src: url('/fonts/Hadenut.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

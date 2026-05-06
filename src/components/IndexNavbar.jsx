@@ -29,11 +29,42 @@ const IndexNavbar = () => {
             }`}>
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3.5">
                 <Link to="/" className="flex items-center max-[400px]:space-x-1 space-x-3 rtl:space-x-reverse">
-                    <img src="/logo.png" className="max-[400px]:h-7 h-8" alt="Flowbite Logo" />
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap text-white max-[400px]:text-base">Filmopedia</span>
+                    <img src="/logo.png" className="h-8" alt="Flowbite Logo" />
+                              <span className="font-[Hadenut] self-center text-xl sm:text-2xl whitespace-nowrap
+                          text-white
+                        
+                          tracking-[2px]
+                          sm:inline-block
+                          relative
+                          transition-all duration-300
+
+                          /* Neon Glow */
+                          [text-shadow:0_0_10px_#2196f3]
+
+                          /* Hover Effects */
+                          hover:-translate-y-[2px]
+                          hover:[text-shadow:0_0_15px_#2196f3,0_0_30px_#2196f3]
+
+                          /* After Line */
+                          after:content-['']
+                          after:absolute
+                          after:left-0
+                          after:bottom-[-4px]
+                          after:w-full
+                          after:h-[2px]
+                          after:bg-[#2196f3]
+                          after:scale-x-0
+                          after:origin-right
+                          after:transition-transform
+                          after:duration-300
+                          after:shadow-[0_0_10px_#2196f3]
+
+                          /* Hover After Animation */
+                          hover:after:scale-x-100
+                          hover:after:origin-left">Filmopedia</span>
                 </Link>
                 <div className="flex md:order-2 max-[400px]:space-x-1 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                    <Link to="/documentation" type="button" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center">Documentation</Link>
+                    <Link to="/documentation" type="button" className="text-white font-[sora] font-bold border-2 border-blue-500 hover:border-blue-700 hover:bg-blue-700 rounded-lg text-sm px-3 py-2 text-center">Documentation</Link>
                     <button data-collapse-toggle="navbar-sticky" type="button" onClick={() => setIsMenuOpen(!isMenuOpen)} className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                         <span className="sr-only">Open main menu</span>
                         {isMenuOpen ? (

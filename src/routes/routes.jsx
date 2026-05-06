@@ -17,6 +17,7 @@ import RouteError from "../pages/RouteError.jsx.jsx";
 import Index from "../pages/Index.jsx";
 import Documentation from "../pages/Documentation.jsx";
 import Contact from "../pages/Contact.jsx";
+import MovieDetail from "../pages/MovieDetail.jsx";
 
 
 export const router = createBrowserRouter([
@@ -66,6 +67,11 @@ export const router = createBrowserRouter([
       {
         path: "*",
         Component: NotFound
+      },
+      {
+        path: '/movie/:id',
+        element: <MovieDetail />,
+        errorElement: <RouteError />
       }
     ]
   }

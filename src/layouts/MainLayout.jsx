@@ -4,9 +4,9 @@ import MainNavbar from '../components/MainNavbar'
 
 const MainLayout = () => {
   return (
-    <section className='flex flex-col'>
+    <section className='flex flex-col bg-gray-900'>
       <MainNavbar />
-      <div className='flex-1'>
+      <div className='flex-1 mt-16'>
         <Outlet />
       </div>
       <Footer textColor = "text-white"/>

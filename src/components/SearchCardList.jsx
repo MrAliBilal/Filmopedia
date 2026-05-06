@@ -1,4 +1,4 @@
-import { useSearchParams, useLocation, useNavigate } from 'react-router';
+import { useSearchParams, useLocation, useNavigate, Link } from 'react-router';
 import { useState } from 'react';
 
 export const SearchCardList = ({ results, total_pages, page, type, title, pathSearch,placeHolderText, searchType }) => {
@@ -38,7 +38,7 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
 
       <section className="sm:px-8 sm:pt-10">
         <div className="sm:px-4 border-b-1 border-gray-200 mx-auto text-center lg:py-16 z-10 relative ">
-          <h1 className="sm:mb-6 mb-4 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">{title}</h1>
+          <h1 className="text-white sm:mb-6 mb-4 text-4xl font-bold tracking-tighter text-heading md:text-5xl lg:text-6xl">{title}</h1>
           <form className='relative flex flex-col px-12 max-sm:mb-4 sm:pb-8' onSubmit={handleSearch}>
             <input id='temp1'
               className='sm:min-w-md h-12 my-4 px-6 bg-gray-100 text-black  rounded-4xl focus:outline-none 
@@ -56,7 +56,7 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
 
 
       {results.length > 0 ? (
-        <ul className='flex flex-col sm:p-8 '>
+        <ul className='flex flex-col sm:p-8 text-white'>
           {results.map((searchItem) => (
             <li key={searchItem.id} className='p-4 border-b-1 border-gray-200 flex flex-row'>
               <div className="flex-shrink-0 ">
@@ -71,7 +71,7 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
                   <span>{isSearchPath ? searchItem.media_type.charAt(0).toUpperCase() + searchItem.media_type.slice(1) : type}</span>
                   <span className="ml-4">{searchItem.first_air_date || searchItem.release_date || searchItem.gender ? searchItem.release_date || searchItem.first_air_date || getGender(searchItem.gender) : 'Not Available'}</span>
                   <span className="ml-4 relative before:content-[url(/star.svg)] before:mr-1 before:relative before:top-[3px]">{searchItem.vote_average ? searchItem.vote_average.toFixed(1) : 'N/A'}</span></h3>
-                <p className='text-gray-600 font-bold max-sm:line-clamp-2 min-sm:line-clamp-3'>{searchItem.overview}</p>
+                <p className='text-gray-300 font-bold max-sm:line-clamp-2 min-sm:line-clamp-3'>{searchItem.overview}</p>
               </div>
             </li>
           ))}
@@ -90,9 +90,9 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
           >
             Previous
           </button>
-          <span>
+          <h1 className='text-white'>
             Page {page} of {total_pages}
-          </span>
+          </h1>
           <button
             onClick={() => handlePageChange(page + 1)}
             disabled={page === total_pages}
