@@ -4,7 +4,7 @@ export default function RouteError() {
 
   return (
     <>
-        <main className="h-[75vh] flex flex-col items-center justify-center p-6 text-center">
+        <main className="h-[75vh] text-white flex flex-col items-center justify-center p-6 text-center">
       <h1 className="text-5xl font-bold text-primary-500">Oops!</h1>
 
       <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">

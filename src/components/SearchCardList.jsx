@@ -1,7 +1,7 @@
 import { useSearchParams, useLocation, useNavigate, Link } from 'react-router';
 import { useState } from 'react';
 
-export const SearchCardList = ({ results, total_pages, page, type, title, pathSearch,placeHolderText, searchType }) => {
+export const SearchCardList = ({ results, total_pages, page, type, title, pathSearch, placeHolderText, searchType }) => {
 
   const location = useLocation();
   const isSearchPath = location.pathname === '/search';
@@ -16,6 +16,31 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
       case 2: return "Male";
       case 3: return "Non-Binary";
       default: return "Unknown";
+    }
+  };
+
+  const getItemLink = (item) => {
+    const mediaType = item.media_type || type;
+    console.log(mediaType);
+    switch (mediaType) {
+      case "movie":
+        return `/movie/${item.id}`;
+      case "Movie":
+        return `/movie/${item.id}`;
+      case "tv":
+        return `/tv/${item.id}`;
+      case "TV":
+        return `/tv/${item.id}`;
+      case "Collection":
+        return `/collection/${item.id}`;
+      case "People":
+        return `/person/${item.id}`;
+      case "People":
+        return `/person/${item.id}`;
+      case "Company":
+        return `/company/${item.id}`;
+      default:
+        return "/404";
     }
   };
 
@@ -46,10 +71,10 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
               placeholder={placeHolderText}
               type="text"
               onChange={(e) => setQuery(e.target.value)}></input>
-            <button dir="rtl" 
-            className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 mr-12
-            bg-linear-to-r from-emerald-300 to-cyan-400 text-while rounded-4xl' 
-            type="submit" >Search</button>
+            <button dir="rtl"
+              className='absolute rtl start-0 top-0 min-w-22 h-12 my-4 mr-12
+            bg-linear-to-r from-emerald-300 to-cyan-400 text-while rounded-4xl'
+              type="submit" >Search</button>
           </form>
         </div>
       </section>
@@ -60,13 +85,20 @@ export const SearchCardList = ({ results, total_pages, page, type, title, pathSe
           {results.map((searchItem) => (
             <li key={searchItem.id} className='p-4 border-b-1 border-gray-200 flex flex-row'>
               <div className="flex-shrink-0 ">
-                <img
-                  className="h-40 max-w-[300px] shadow-md rounded-md mr-4 object-contain"
-                  src={searchItem.poster_path || searchItem.profile_path || searchItem.logo_path
-                    ? `https://image.tmdb.org/t/p/w200${searchItem.poster_path || searchItem.profile_path || searchItem.logo_path}` : '/no-movie.png'}></img>
+                <Link
+                  to={getItemLink(searchItem)}
+                  className=' hover:pointer'
+                >
+                  <img
+                    className="h-40 max-w-[300px] shadow-md rounded-md mr-4 object-contain"
+                    src={searchItem.poster_path || searchItem.profile_path || searchItem.logo_path
+                      ? `https://image.tmdb.org/t/p/w200${searchItem.poster_path || searchItem.profile_path || searchItem.logo_path}` : '/no-movie.png'}></img></Link>
               </div>
               <div className="mt-1">
-                <h3 className='text-black-200 font-bold my-1'>{searchItem.title || searchItem.name}</h3>
+                <Link
+                  to={getItemLink(searchItem)}
+                  className=' hover:text-blue-500 transition duration-200'
+                ><h3 className='text-black-200 font-bold my-1'>{searchItem.title || searchItem.name}</h3></Link>
                 <h3 className='text-blue-400 my-1'>
                   <span>{isSearchPath ? searchItem.media_type.charAt(0).toUpperCase() + searchItem.media_type.slice(1) : type}</span>
                   <span className="ml-4">{searchItem.first_air_date || searchItem.release_date || searchItem.gender ? searchItem.release_date || searchItem.first_air_date || getGender(searchItem.gender) : 'Not Available'}</span>

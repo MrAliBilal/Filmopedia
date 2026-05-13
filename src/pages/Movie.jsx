@@ -7,8 +7,6 @@ export const Movie = () => {
 
   const { popular, nowPlaying, topRated, upcoming } = useLoaderData();
 
-  console.log(popular, nowPlaying, topRated, upcoming);
-
   return (
     <>
       <HeroSection
@@ -18,10 +16,10 @@ export const Movie = () => {
         pathSearch="/search"
         bgLink="/hero_section/movie-hero-section.webp" />
 
-      <DiscoverList results={popular} cardTitle="Popular Movies" />
-      <DiscoverList results={nowPlaying} cardTitle="Now Playing Movies" />
-      <DiscoverList results={topRated} cardTitle="Top Rated Movies" />
-      <DiscoverList results={upcoming} cardTitle="Up Coming Movies" />
+      <DiscoverList results={popular} cardTitle="Popular Movies" type="movie" />
+      <DiscoverList results={nowPlaying} cardTitle="Now Playing Movies" type="movie" />
+      <DiscoverList results={topRated} cardTitle="Top Rated Movies" type="movie" />
+      <DiscoverList results={upcoming} cardTitle="Up Coming Movies" type="movie" />
     </>
   )
 }

@@ -20,7 +20,7 @@ const MainNavbar = () => {
   }, []);
 
   return (
-    <nav className="fixed w-full z-20 sm:px-6 bg-gray-900/80 backdrop-blur-md border-b border-gray-800 shadow-lg transition-all duration-300">
+    <nav className="fixed w-full z-50 sm:px-6 bg-gray-900/80 backdrop-blur-md border-b border-gray-800 shadow-lg transition-all duration-300">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
         <Link to="/" className="flex items-center max-[400px]:space-x-1 space-x-3 rtl:space-x-reverse">
           <img src="/logo.png" className="h-8" alt="Filmopedia Logo" />

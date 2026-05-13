@@ -18,6 +18,10 @@ import Index from "../pages/Index.jsx";
 import Documentation from "../pages/Documentation.jsx";
 import Contact from "../pages/Contact.jsx";
 import MovieDetail from "../pages/MovieDetail.jsx";
+import TVDetail from "../pages/TVDetail.jsx";
+import CollectionDetail from "../pages/CollectionDetail.jsx";
+import PersonDetail from "../pages/PersonDetail.jsx";
+import CompanyDetail from "../pages/CompanyDetail.jsx";
 
 
 export const router = createBrowserRouter([
@@ -71,6 +75,26 @@ export const router = createBrowserRouter([
       {
         path: '/movie/:id',
         element: <MovieDetail />,
+        errorElement: <RouteError />
+      },
+      {
+        path: '/tv/:id',
+        element: <TVDetail />,
+        errorElement: <RouteError />
+      },
+      {
+        path: '/collection/:id',
+        element: <CollectionDetail />,
+        errorElement: <RouteError />
+      },
+      {
+        path: '/person/:id',
+        element: <PersonDetail />,
+        errorElement: <RouteError />
+      },
+      {
+        path: '/company/:id',
+        element: <CompanyDetail />,
         errorElement: <RouteError />
       }
     ]

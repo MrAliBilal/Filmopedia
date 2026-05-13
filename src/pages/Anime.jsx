@@ -12,9 +12,9 @@ const Anime = () => {
         SearchText="Search for a anime..."
         pathSearch="/search/anime"
         bgLink="/hero_section/anime-hero-section.jpg" />
-      <DiscoverList results={popular} cardTitle="Popular Anime" />
-      <DiscoverList results={topRated} cardTitle="Top Rated Anime" />
-      <DiscoverList results={airingToday} cardTitle="Airing Anime" />
+      <DiscoverList results={popular} cardTitle="Popular Anime" type="tv" />
+      <DiscoverList results={topRated} cardTitle="Top Rated Anime" type="tv" />
+      <DiscoverList results={airingToday} cardTitle="Airing Anime" type="tv" />
       {/* <DiscoverList results = {onTheAir} cardTitle="Up Coming" /> */}
     </>
   )

@@ -20,7 +20,7 @@ const IndexNavbar = () => {
     }, []);
 
     return (
-        <nav className={`fixed w-full z-20 top-0 start-0 sm:px-6 transition-colors duration-300 
+        <nav className={`fixed w-full z-50 top-0 start-0 sm:px-6 transition-colors duration-300 
       ${isScrolled
                 ? "bg-black shadow-md"
                 : isRootPath
